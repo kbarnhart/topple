@@ -5,6 +5,10 @@ tic
 mainFolder=cd;
 experimentFolder='paperFullRun01';
 
+if ~exist(experimentFolder, 'dir')
+    mkdir(experimentFolder)
+end
+
 whiteFN='whMethod';
 rhFN='rhMethod';
 krFN='krMethod';
@@ -155,9 +159,7 @@ for k=1:length(subMarineModel)
     
     sucess=0;
     stop=0;
-    
-    if exist(outPath, 'file')==0
-    
+        
     while (sucess<4)&&(stop==0)
         
          try
@@ -173,7 +175,7 @@ for k=1:length(subMarineModel)
     fprintf('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n \n \n')
     itter=itter+1;
     
-   end            
+               
 end
 
 
@@ -222,7 +224,6 @@ for k=1:length(subMarineModel)
     
     sucess=0;
     stop=0;
-    if exist(outPath, 'file')==0
 
     while (sucess<4)&&(stop==0)
         
@@ -238,7 +239,7 @@ for k=1:length(subMarineModel)
     fprintf([ num2str(toc) ' seconds elapsed \n'] )
     fprintf('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n \n \n')
     itter=itter+1;
-    end
+    
                 
 end
 
@@ -286,8 +287,6 @@ for k=1:length(subMarineModel)
         sucess=0;
         stop=0;
         
-        if exist(outPath, 'file')==0
-
         while (sucess<4)&&(stop==0)
              try
                 topple0501fxn(outPath, t, dt, obsiceon, water_height, waveheight, m, m_air,method);
@@ -301,7 +300,7 @@ for k=1:length(subMarineModel)
         fprintf([ num2str(toc) ' seconds elapsed \n'] )
         fprintf('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n \n \n')
         itter=itter+1;
-        end
+        
         
     end
                 
@@ -365,8 +364,6 @@ for k=1:length(subMarineModel)
         sucess=0;
         stop=0;
         
-        if exist(outPath, 'file')==0
-
         while (sucess<4)&&(stop==0)
         
             try
@@ -377,7 +374,7 @@ for k=1:length(subMarineModel)
                 fprintf('Failed \n')
                 sucess=sucess+1;
             end  
-        end
+        
         end
         
 
@@ -443,8 +440,6 @@ for k=1:length(subMarineModel)
         sucess=0;
         stop=0;
         
-        if exist(outPath, 'file')==0
-
         while (sucess<4)&&(stop==0)
         
             try
@@ -454,8 +449,6 @@ for k=1:length(subMarineModel)
                 fprintf('Failed \n')
                 sucess=sucess+1;
             end  
-        end
-        
         end
 
         fprintf([ num2str(toc) ' seconds elapsed \n'] )
@@ -510,8 +503,6 @@ for k=1:length(subMarineModel)
         sucess=0;
         stop=0;
         
-        if exist(outPath, 'file')==0
-
         while (sucess<4)&&(stop==0)
         
             try
@@ -527,7 +518,6 @@ for k=1:length(subMarineModel)
         fprintf([ num2str(toc) ' seconds elapsed \n'] )
         fprintf('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n \n \n')
         itter=itter+1;
-        end
     end
 end
 
@@ -574,8 +564,6 @@ for k=1:length(subMarineModel)
         sucess=0;
         stop=0;
        
-        if exist(outPath, 'file')==0
-
         while (sucess<4)&&(stop==0)
         
             try
@@ -586,7 +574,7 @@ for k=1:length(subMarineModel)
                 fprintf('Failed \n')
                 sucess=sucess+1;
             end  
-        end
+    
 
         fprintf([ num2str(toc) ' seconds elapsed \n'] )
         fprintf('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n \n \n')
