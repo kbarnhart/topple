@@ -5,8 +5,6 @@ tic
 mainFolder=cd;
 experimentFolder='paperFullRun01';
 
-path(path, '../otherscripts')
-
 whiteFN='whMethod';
 rhFN='rhMethod';
 krFN='krMethod';
