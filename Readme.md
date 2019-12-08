@@ -8,7 +8,9 @@ The model was run using the with the drivers `topple0501driver_*.m` which in tur
 
 * `topple0501driver.m` runs the long-term model runs.
 * `topple0501driver_observationPeriod.m` runs the model runs for the 2010 observation period.
-* `topple0501driver_observationPeriodMOVIE.m` creates the example movie. 
+* `topple0501driver_observationPeriodMOVIE.m` creates the example movie.
+
+This produces output .mat files in directories, one file for each simulation.
 
 In Dec 2019, the code was "tested" with R2019b. Tested in that the scripts were
-run and completed.
+run and completed. The original output .mat files were tracked in git and are provided here. When I re-ran the scripts, they change the .mat files slightly. I don't have the time to track down exactly how and why they are different. The difference may be minimal, I don't know. Note that this project occurred before I learned most of what I know about software development, continuous integration, and testing.
